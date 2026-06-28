@@ -5,8 +5,10 @@ import pickle
 import plotly.express as px
 import re
 import string
+from pathlib import Path
 
 st.set_page_config(page_title="Zomato Review Intelligence", layout="wide")
+BASE_DIR = Path(__file__).parent
 st.markdown("""
 <style>
 
