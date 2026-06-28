@@ -58,16 +58,16 @@ def load_artifacts():
     with open(BASE_DIR / "sentiment_model.pkl", "rb") as f:
         sentiment_model = pickle.load(f)
 
-    with open("tfidf_vectorizer.pkl", "rb") as f:
+    with open(BASE_DIR / "tfidf_vectorizer.pkl", "rb") as f:
         tfidf = pickle.load(f)
 
-    with open("kmeans_model.pkl", "rb") as f:
+    with open(BASE_DIR / "kmeans_model.pkl", "rb") as f:
         kmeans = pickle.load(f)
 
-    with open("scaler.pkl", "rb") as f:
+    with open(BASE_DIR / "scaler.pkl", "rb") as f:
         scaler = pickle.load(f)
 
-    restaurant_clusters = pd.read_csv("restaurant_clusters.csv")
+    restaurant_clusters = pd.read_csv(BASE_DIR / "restaurant_clusters.csv")
 
     return sentiment_model, tfidf, kmeans, scaler, restaurant_clusters
 
