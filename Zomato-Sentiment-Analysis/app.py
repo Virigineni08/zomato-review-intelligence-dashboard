@@ -55,7 +55,7 @@ div[data-testid="metric-container"]{
 # Load saved artifacts
 @st.cache_resource
 def load_artifacts():
-    with open("sentiment_model.pkl", "rb") as f:
+    with open(BASE_DIR / "sentiment_model.pkl", "rb") as f:
         sentiment_model = pickle.load(f)
 
     with open("tfidf_vectorizer.pkl", "rb") as f:
